@@ -1,0 +1,27 @@
+{
+  "name": "netishield-run",
+  "version": "1.0.0",
+  "description": "NetiShield Run - Professional Telegram Native HTML5 Arcade Game",
+  "main": "bot/bot.js",
+  "scripts": {
+    "start": "node bot/bot.js",
+    "dev": "node bot/bot.js"
+  },
+  "keywords": [
+    "telegram",
+    "game",
+    "html5",
+    "canvas",
+    "telegraf",
+    "netishield"
+  ],
+  "author": "NetiShield",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "telegraf": "^4.16.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
