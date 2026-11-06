@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fa" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#0a0e17" />
+  <title>NetiShield Run</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Official Telegram Games helper (only works inside Telegram client) -->
+  <script src="https://telegram.org/js/games.js"></script>
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Start Screen -->
+    <div id="start-screen" class="overlay">
+      <div class="glass-panel start-panel">
+        <div class="logo-container">
+          <div class="logo-n">N</div>
+          <div class="logo-glow"></div>
+        </div>
+        <h1 class="title">NETISHIELD <span>RUN</span></h1>
+        <p class="subtitle">Neon Arcade Runner</p>
+        <div class="best-score-box">
+          <span class="label">BEST SCORE</span>
+          <span id="best-score-display">0</span>
+        </div>
+        <button id="play-btn" class="btn primary neon-btn">PLAY</button>
+        <div class="controls-hint">
+          <p>TAP / CLICK to Jump</p>
+          <p>Avoid obstacles • Collect crystals</p>
+        </div>
+        <button id="sound-toggle-start" class="btn icon-btn" title="Toggle Sound">🔊</button>
+      </div>
+    </div>
+
+    <!-- HUD -->
+    <div id="hud" class="hidden">
+      <div class="hud-left glass-hud">
+        <div class="hud-item">
+          <span class="hud-label">SCORE</span>
+          <span id="score-value">0</span>
+        </div>
+        <div class="hud-item">
+          <span class="hud-label">BEST</span>
+          <span id="hud-best">0</span>
+        </div>
+      </div>
+      <div class="hud-right glass-hud">
+        <div class="lives" id="lives-container">
+          <span class="life">♥</span>
+          <span class="life">♥</span>
+          <span class="life">♥</span>
+        </div>
+        <button id="pause-btn" class="btn icon-btn small">⏸</button>
+        <button id="sound-toggle" class="btn icon-btn small">🔊</button>
+      </div>
+    </div>
+
+    <!-- Pause Screen -->
+    <div id="pause-screen" class="overlay hidden">
+      <div class="glass-panel">
+        <h2>PAUSED</h2>
+        <button id="resume-btn" class="btn primary neon-btn">RESUME</button>
+        <button id="restart-from-pause" class="btn secondary">RESTART</button>
+      </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="gameover-screen" class="overlay hidden">
+      <div class="glass-panel">
+        <h2 class="gameover-title">GAME OVER</h2>
+        <div class="final-score">
+          <span class="label">SCORE</span>
+          <span id="final-score">0</span>
+        </div>
+        <div class="final-best">
+          <span class="label">BEST</span>
+          <span id="final-best">0</span>
+        </div>
+        <button id="play-again-btn" class="btn primary neon-btn">PLAY AGAIN</button>
+        <button id="share-score-btn" class="btn secondary" style="display:none;">SHARE SCORE</button>
+      </div>
+    </div>
+
+    <!-- Jump Button (mobile friendly) -->
+    <button id="jump-btn" class="jump-btn hidden" aria-label="Jump">⬆</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
