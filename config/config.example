@@ -1,0 +1,8 @@
+# Copy this file content logic is handled via .env
+# Keep secrets out of source control.
+#
+# Required environment variables:
+# BOT_TOKEN
+# GAME_SHORT_NAME
+# GAME_URL
+# ADMIN_IDS
